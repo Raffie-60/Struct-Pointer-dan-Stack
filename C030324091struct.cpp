@@ -9,18 +9,24 @@ struct mahasiswa{
 };
 
 int main(){
-    mahasiswa Raffie;
+    mahasiswa raffie;
+    mahasiswa* ptr = &raffie;
 
-    Raffie.nim = "C030324091";
-    Raffie.nama = "Muhammad Raffie Fadillah";
-    Raffie.alamat = "Banjarbaru, Kalimantan Selatan";
-    Raffie.ipk = 3.7;
+    (*ptr).nim = "C030324091";
+    (*ptr).nama = "Muhammad Raffie Fadillah";
+    (*ptr).alamat = "Banjarbaru, Kalimantan Selatan";
+    (*ptr).ipk = 3.7;
 
     cout << endl << "Data Mahasiswa" << endl;
-    cout << "NIM: " << Raffie.nim << endl;
-    cout << "Nama: " << Raffie.nama << endl;
-    cout << "Alamat: " <<Raffie.alamat << endl;
-    cout << "IPK: " << Raffie.ipk << endl;
+    cout << "NIM: " << (*ptr).nim << endl;
+    cout << "Nama: " << (*ptr).nama << endl;
+    cout << "Alamat: " <<(*ptr).alamat << endl;
+    cout << "IPK: " << (*ptr).ipk << endl;
+
+
+
 
     return 0;
+
+
 }
